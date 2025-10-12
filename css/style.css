@@ -1414,6 +1414,9 @@ html.with-fancybox body.hide-scrollbar {
         order: 2;
     gap: 5px 15px;
   }
+  .header .contacts-inner-wrap a:hover {
+    color: var(--clr-att);
+  }
   .header .links-inner-wrap {
     display: -ms-flexbox;
     display: flex;
