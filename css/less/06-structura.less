@@ -189,6 +189,12 @@ html.with-fancybox body.hide-scrollbar {
 			margin-top: 4px;
 		}
 	}
+	[data-count] {
+		overflow: visible;
+	}
+	[data-count]:after {
+		margin-bottom: 5px;
+	}
 }
 .header-mobile-actions-panel {
 	position: fixed;
@@ -445,6 +451,9 @@ html.with-fancybox body.hide-scrollbar {
 		top: 0;left: 0;right: 0;
 		background: #fff;
 		z-index: 99;
+		[data-count]:after {
+			margin-bottom: 10px;
+		}
 		.search-result-wrap {
 			background: #fff;
 			z-index: 20;
@@ -1125,6 +1134,13 @@ html.with-fancybox body.hide-scrollbar {
 	}
 	.header-top-panel {
 		font-size: 14px;
+	}
+}
+@media (min-width: 1200px) {
+	.header {
+		[data-count]:after {
+			margin-bottom: 18px;
+		}
 	}
 }
 @media (min-width: 1400px) {
