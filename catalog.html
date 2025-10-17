@@ -2618,7 +2618,7 @@
 
 
     <!--popup-outer-box-->
-    <div class="popup-outer-box popup-cookie" id="popup-cookie">
+    <div class="popup-outer-box popup-cookie" id="cookie_notification">
         <div class="popup-box">
             <div class="popup-content-wrap">
                 <div class="popup-cookie-box">
@@ -2626,7 +2626,7 @@
                         <p>Мы используем файлы cookie для обеспечения корректной работы сайта, аналитики и повышения удобства. <br>Продолжая использовать сайт, вы соглашаетесь на использование файлов cookie. <br><a href="" class="link-main">Политика конфиденциальности и обработки персональных данных</a></p>
                     </div>
                     <div class="action-inner-wrap">
-                        <a href="" class="btn button-arrow-link js-popup-close">
+                        <a href="" class="btn button-arrow-link cookie_accept">
                             <div class="button-title">Принять</div>
                         </a>
                     </div>
@@ -2634,6 +2634,21 @@
             </div>
         </div>
     </div><!--/popup-outer-box-->
+    <script>
+        function checkCookies() {
+            let cookieDate = localStorage.getItem('cookieDate');
+            let cookieNotification = document.getElementById('cookie_notification');
+            let cookieBtn = cookieNotification.querySelector('.cookie_accept');
+            if (!cookieDate || (+cookieDate + 31536000000) < Date.now()) {
+                cookieNotification.classList.add('active');
+            }
+            cookieBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieDate', Date.now());
+                cookieNotification.classList.remove('active');
+            })
+        }
+        checkCookies();
+    </script>
 
 </body>
 
