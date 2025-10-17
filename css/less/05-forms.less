@@ -1,6 +1,7 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+
 .frm-field-photo-upload {
 	display: block;
 	position: relative;
@@ -432,6 +433,13 @@
 .frm-field {
     display: block;
     width: 100%;
+}
+.frm-content {
+	display: none;
+	animation: fadein ease 0.2s;
+	&.active {
+		display: block;
+	}
 }
 .frm-select, .frm-select-button {
 	position: relative;

@@ -7955,6 +7955,13 @@ div.btn {
   display: block;
   width: 100%;
 }
+.frm-content {
+  display: none;
+  animation: fadein ease 0.2s;
+}
+.frm-content.active {
+  display: block;
+}
 .frm-select,
 .frm-select-button {
   position: relative;
@@ -8255,6 +8262,23 @@ div.btn {
 /* ----------------------------------- *\
 			popups styles
 \* ----------------------------------- */
+.popup-cookie-box {
+  display: block;
+  font-size: 14px;
+  line-height: 1.28571429;
+}
+.popup-cookie-box .info-inner-wrap {
+  margin-bottom: 30px;
+}
+.popup-cookie-box .info-inner-wrap a {
+  color: inherit;
+}
+.popup-cookie-box .info-inner-wrap a:hover {
+  border-bottom: none;
+}
+.popup-cookie-box .btn {
+  width: 100%;
+}
 body.popup-open {
   overflow: hidden;
 }
@@ -8287,6 +8311,20 @@ body.popup-open {
 .popup-outer-box.active {
   display: -ms-flexbox;
   display: flex;
+}
+.popup-cookie {
+  -ms-flex-align: end;
+      align-items: flex-end;
+  padding: var(--paddingContainer);
+}
+.popup-cookie .popup-box {
+  width: 100%;
+  max-width: 1600px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px 20px;
+  color: #fff;
+  margin-bottom: 0;
 }
 .popup-cdek .popup-box {
   padding: 0;
@@ -8464,6 +8502,27 @@ body.popup-open {
   padding: 0 10px;
 }
 @media (min-width: 768px) {
+  .popup-cookie-box {
+    font-size: 2rem;
+    line-height: 1.75;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    gap: 30px;
+  }
+  .popup-cookie-box .info-inner-wrap {
+    -ms-flex: 1;
+        flex: 1;
+    margin: 0;
+  }
+  .popup-cookie-box .action-inner-wrap {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .popup-cookie-box .action-inner-wrap .btn {
+    min-width: 19.2rem;
+  }
   .popup-box {
     width: 671px;
     padding: 40px 40px 20px 40px;
@@ -8529,6 +8588,10 @@ body.popup-open {
   }
 }
 @media (min-width: 1024px) {
+  .popup-cookie .popup-box {
+    border-radius: 5rem;
+    padding: 6rem 6rem 6rem 6rem;
+  }
   .popup-form-main .popup-box .btn-popup-close {
     width: 7.4rem;
     height: 7.4rem;
