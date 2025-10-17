@@ -20,6 +20,9 @@
 }
 body.popup-open {
 	overflow: hidden;
+	&:has(.popup-cookie.active) {
+		overflow: visible;
+	}
 }
 .popup-outer-box {
 	display: none;
@@ -51,6 +54,7 @@ body.popup-open {
 .popup-cookie {
 	align-items: flex-end;
 	padding: var(--paddingContainer);
+	background: none;
 	.popup-box {
 		width: 100%;
 		max-width: 1600px;

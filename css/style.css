@@ -8282,6 +8282,9 @@ div.btn {
 body.popup-open {
   overflow: hidden;
 }
+body.popup-open:has(.popup-cookie.active) {
+  overflow: visible;
+}
 .popup-outer-box {
   display: none;
   padding: 20px var(--paddingContainer);
@@ -8316,6 +8319,7 @@ body.popup-open {
   -ms-flex-align: end;
       align-items: flex-end;
   padding: var(--paddingContainer);
+  background: none;
 }
 .popup-cookie .popup-box {
   width: 100%;
