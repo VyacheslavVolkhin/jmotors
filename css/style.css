@@ -8330,6 +8330,9 @@ body.popup-open:has(.popup-cookie.active) {
   color: #fff;
   margin-bottom: 0;
 }
+.popup-cookie .popup-box .cookie_accept {
+  cursor: pointer;
+}
 .popup-cdek .popup-box {
   padding: 0;
 }
