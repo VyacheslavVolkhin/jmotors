@@ -17,6 +17,16 @@
 //@import 'animate.less';
 
 /* reviews avito add */
+.lk-title-box {
+	.order-download-wrap {
+		.btn {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 .title-box {
 	&:has(.button-avito) {
 		display: flex;
@@ -50,6 +60,23 @@
 				width: auto;
 				height: 100%;
 				max-width: inherit;
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.lk-title-box.section-lk-order {
+		.order-info-wrap {
+			align-items: flex-start;
+		}
+		.order-number {
+			line-height: 60px;
+		}
+		.order-download-wrap {
+			width: 300px;
+			flex: 0 0 300px;
+			.btn {
+				padding: 0 10px;
 			}
 		}
 	}

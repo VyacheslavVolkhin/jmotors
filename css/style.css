@@ -9841,6 +9841,12 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 			icons
 \* ----------------------------------- */
 /* reviews avito add */
+.lk-title-box .order-download-wrap .btn {
+  margin-bottom: 10px;
+}
+.lk-title-box .order-download-wrap .btn:last-child {
+  margin-bottom: 0;
+}
 .title-box:has(.button-avito) {
   display: -ms-flexbox;
   display: flex;
@@ -9882,5 +9888,22 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
   width: auto;
   height: 100%;
   max-width: inherit;
+}
+@media (min-width: 1024px) {
+  .lk-title-box.section-lk-order .order-info-wrap {
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  .lk-title-box.section-lk-order .order-number {
+    line-height: 60px;
+  }
+  .lk-title-box.section-lk-order .order-download-wrap {
+    width: 300px;
+    -ms-flex: 0 0 300px;
+        flex: 0 0 300px;
+  }
+  .lk-title-box.section-lk-order .order-download-wrap .btn {
+    padding: 0 10px;
+  }
 }
 /* end reviews avito add */
