@@ -15,3 +15,43 @@
 \* ----------------------------------- */
 //@import 'icons.less';
 //@import 'animate.less';
+
+/* reviews avito add */
+.title-box {
+	&:has(.button-avito) {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px 30px;
+		.title-wrap {
+			margin: 0;
+			flex: 1;
+		}
+		.action-wrap {
+			display: block;
+		}
+	}
+	.btn.button-avito {
+		height: 6rem;
+		border-radius: 3rem;
+		padding: 0 19px;
+		font-size: 16px;
+		font-weight: 600;
+		gap: 5px;
+		.button-ico {
+			width: auto;
+			height: 3.6rem;
+			img, svg {
+				position: relative;
+				top: auto;
+				bottom: auto;
+				left: auto;
+				right: auto;
+				width: auto;
+				height: 100%;
+				max-width: inherit;
+			}
+		}
+	}
+}
+/* end reviews avito add */

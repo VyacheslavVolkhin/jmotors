@@ -9840,3 +9840,47 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 /* ----------------------------------- *\
 			icons
 \* ----------------------------------- */
+/* reviews avito add */
+.title-box:has(.button-avito) {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 30px;
+}
+.title-box:has(.button-avito) .title-wrap {
+  margin: 0;
+  -ms-flex: 1;
+      flex: 1;
+}
+.title-box:has(.button-avito) .action-wrap {
+  display: block;
+}
+.title-box .btn.button-avito {
+  height: 60px;
+  height: 6rem;
+  border-radius: 3rem;
+  padding: 0 19px;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 5px;
+}
+.title-box .btn.button-avito .button-ico {
+  width: auto;
+  height: 36px;
+  height: 3.6rem;
+}
+.title-box .btn.button-avito .button-ico img,
+.title-box .btn.button-avito .button-ico svg {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  width: auto;
+  height: 100%;
+  max-width: inherit;
+}
+/* end reviews avito add */
