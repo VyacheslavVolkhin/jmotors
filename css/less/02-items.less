@@ -1,6 +1,62 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-video {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	line-height: 1;
+	aspect-ratio: 1;
+	video,
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.tile-img {
+		display: block;
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.elm-photo {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+		aspect-ratio: inherit !important;
+	}
+	.btn-action-ico {
+		display: block;
+		position: absolute;
+		top: 0;bottom: 0;left: 0;right: 0;
+		z-index: 4;
+		margin: auto;
+		background: red;
+	}
+	&:after {
+		content: "";
+		display: block;
+		z-index: 2;
+		position: absolute;
+		top: 0;bottom: 0;left: 0;right: 0;
+	}
+	&.active {
+		.elm-photo, img, .tile-img, .btn-action-ico, &:after {
+			display: none;
+		}
+	}
+}
 .item-tile-compare {
 	display: block;
 	position: relative;
@@ -791,7 +847,7 @@
 			right: 0;
 			z-index: 1;
 			background: fade(#000, 50) url(../img/icons/play.svg) center no-repeat;
-			background-size: 57.8% auto;
+			background-size: 6rem auto;
 			transition: all ease 0.2s;
 			margin: auto;
 		}

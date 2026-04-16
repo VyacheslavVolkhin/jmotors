@@ -173,6 +173,22 @@ div.btn {
 		width: auto;
 		padding: 0;
 	}
+	.button-ico {
+		&.ico-round {
+			width: 4.5rem;
+			height: 4.5rem;
+			flex-shrink: 0;
+			border-radius: 50%;
+			background: var(--clr-att-second);
+			filter: none;
+			img, svg {
+				filter: var(--filterWhite);
+			}
+		}
+	}
+}
+.button-round {
+	border-radius: 100px;
 }
 [data-count] {
 	&:after {
@@ -244,6 +260,42 @@ div.btn {
 		.button-ico, &:after, &:before {
 			filter: none;
 		}
+	}
+}
+.button-tab-main {
+	height: 8.3rem;
+	border-radius: 1rem;
+	border-color: var(--clr-bg);
+	background-color: var(--clr-bg);
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 130%;
+	padding: 0 2em;
+	color: var(--clr-base);
+	border: none;
+	&.active {
+		color: #fff;
+		&:before {
+			opacity: 1;
+			filter: none;
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		background: linear-gradient(195deg, #2274d3 0%, #5122d3 100%);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		transition: all ease 0.2s;
+		filter: none;
+	}
+	.button-title {
+		z-index: 2;
+		position: relative;
 	}
 }
 .button-tab {
@@ -691,6 +743,10 @@ div.btn {
 	.btn {
 		font-size: 18px;
 		height: 70px;
+	}
+	.button-tab-main {
+		height: 8.3rem;
+		font-size: 2.3rem;
 	}
 	.button-round {
 		border-radius: 40px;

@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		//settings
 	});
 
+	
+
 
 	//copy button
 	document.querySelectorAll('.js-btn-copy').forEach(function(btn) {

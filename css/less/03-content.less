@@ -302,6 +302,14 @@
 	}
 	.slider-photos-thumbs {
 		display: none;
+		.elm-photo {
+			aspect-ratio: 320/310;
+			&.photo-play {
+				&:after {
+					background-size: 57.8% auto;
+				}
+			}
+		}
 	}
 }
 .article-box {
@@ -758,7 +766,7 @@
 			}
 		}
 	}
-	.elm-photo {
+	.elm-photo, .item-tile-video {
 		aspect-ratio: 155/200;
 		border-radius: var(--mainRadius);
 	}
@@ -840,6 +848,17 @@
 		line-height: 36px;
 	}
 }
+.tabs-main-box {
+	margin-bottom: 5rem;
+	.menu {
+		display: flex;
+		gap: 2rem;
+		flex-wrap: wrap;
+		li {
+			flex-shrink: 0;
+		}
+	}
+}
 .tabs-box {
 	margin-bottom: 30px;
 	&.section-lk {
@@ -856,6 +875,9 @@
 			flex-shrink: 0;
 			max-width: 198px;
 		}
+	}
+	.btn {
+		width: 100%;
 	}
 }
 .title-box {
@@ -884,6 +906,9 @@
 	}
 	.action-wrap {
 		display: none;
+		&.wrap-main {
+			display: block;
+		}
 	}
 	.title-info-wrap {
 		flex: 1;
@@ -899,6 +924,13 @@
 	}
 	.slider-actions-wrap {
 		display: none;
+	}
+	.button-round {
+		padding: 0 20px;
+		&:has(.button-ico:last-child) {
+			padding-right: 6px;
+			gap: 2rem;
+		}
 	}
 }
 .more-box {
@@ -1526,6 +1558,9 @@
 		margin-bottom: 0;
 	}
 }
+.max-1300 {
+	max-width: 1330px;
+}
 @media (max-width: 1399px) {
 	.catalog-buttons-box {
 		&:has(.menu-more-wrap) {
@@ -1547,6 +1582,34 @@
 	}
 }
 @media (max-width: 1023px) {
+	.title-box {
+		&:has(.wrap-main) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			.title-wrap {
+				flex: 1;
+				margin: 0;
+			}
+		}
+		.wrap-main {
+			.button-round {
+				height: 40px;
+				padding-left: 14px;
+				&:has(.button-ico:last-child) {
+					gap: 0;
+				}
+				.button-ico.ico-round {
+					width: 30px;height: 30px;
+					img, svg {
+						max-width: 20px;
+						max-height: 20px;
+					}
+				}
+			}
+		}
+	}
 	.info-history-box {
 		.slider-inner-wrap {
 			padding: 0;
@@ -2190,7 +2253,7 @@
 					}
 				}
 			}
-			.elm-photo {
+			.elm-photo, .item-tile-video {
 				aspect-ratio: 612/740;
 				height: auto;
 			}
@@ -2348,6 +2411,16 @@
 
 }
 @media (min-width: 1024px) {
+	.title-box {
+		&:has(+.tabs-main-box) {
+			margin-bottom: 4rem;
+		}
+	}
+	.tabs-main-box {
+		.btn {
+			min-width: 30.4rem;
+		}
+	}
 	.compare-box {
 		padding-bottom: 50px;
 		.slider-title-wrap {
@@ -2375,6 +2448,9 @@
 		}
 	}
 	.tabs-box {
+		.button-tab-main {
+			min-width: 30.4rem;
+		}
 		&.section-lk {
 			margin-bottom: 8rem;
 		}

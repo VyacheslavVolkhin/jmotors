@@ -96,6 +96,18 @@ html.with-fancybox body.hide-scrollbar {
 	}
 }
 .header {
+	.shedule-inner-wrap {
+		color: rgba(64, 64, 64, 0.5);
+		order: 2;
+		text-align: center;
+		padding: 10px 20px 20px 20px;
+		line-height: 1.3;
+		font-size: 14px;
+		font-weight: 400;
+		span, b {
+			font-weight: 600;
+		}
+	}
 	.search-result-wrap {
 		width: 100%;
 		animation: fadein ease 0.2s;
@@ -515,7 +527,7 @@ html.with-fancybox body.hide-scrollbar {
 		}
 		.catalog-inner-wrap {
 			order: 3;
-			text-align: right;
+			text-align: center;
 			.active {
 				&~.catalog-submenu-wrap {
 					display: flex;
@@ -524,8 +536,10 @@ html.with-fancybox body.hide-scrollbar {
 		}
 		.menu-inner-wrap {
 			order: 4;
-			text-align: right;
-			margin-bottom: 30px;
+			text-align: center;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
 		}
 		.location-inner-wrap {
 			margin-bottom: 30px;
@@ -541,7 +555,7 @@ html.with-fancybox body.hide-scrollbar {
 			font-weight: bold;
 			line-height: 24px;
 			display: flex;
-			justify-content: flex-end;
+			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
 			margin-bottom: 28px;
@@ -556,8 +570,12 @@ html.with-fancybox body.hide-scrollbar {
 		}
 		.links-inner-wrap {
 			order: 6;
-			width: calc(100% + 4px);
+			width: calc(100% + 40px);
 			color: var(--clr-att);
+			background: #e9f2fb;
+			padding: 20px 20px 20px 20px;
+			margin-left: -20px;
+			margin-right: -20px;
 		}
 		.action-inner-wrap {
 			order: 1;
@@ -736,6 +754,13 @@ html.with-fancybox body.hide-scrollbar {
 	.header {
 		padding-top: 20px;
 		margin-bottom: 20px;
+		.shedule-inner-wrap {
+			order: 1;
+			flex: 1;
+			text-align: left;
+			padding: 0;
+			font-size: 16px;
+		}
 		.catalog-submenu-wrap, .search-result-wrap {
 			position: absolute;
 			top: 100%;left: 50%;
@@ -864,10 +889,12 @@ html.with-fancybox body.hide-scrollbar {
 			margin-right: -13px;
 		}
 		.location-inner-wrap {
-			width: 30%;
+			width: auto;
 			flex-shrink: 0;
-			order: 1;
+			order: -1;
 			color: var(--clr-att-second);
+			min-width: 110px;
+			padding-right: 15px;
 		}
 		.contacts-inner-wrap {
 			display: flex;
@@ -888,7 +915,8 @@ html.with-fancybox body.hide-scrollbar {
 			flex-wrap: wrap;
 			color: var(--clr-att);
 			order: 3;
-			width: 30%;
+			width: auto;
+			padding-left: 5rem;
 			gap: 5px 10px;
 			margin-right: -6px;
 		}

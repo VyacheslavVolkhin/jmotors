@@ -74,6 +74,39 @@ li {
 	}
 }
 ol {
+	&:has(ol) {
+		counter-reset: li; 
+		list-style: none;
+		ol {
+			margin-bottom: 1.1em;
+			padding-top: 1.1em;
+		}
+		li {
+			position: relative;
+			margin-bottom: 1.1em;
+			padding: 0;
+			&:before {
+				width: auto;
+				position: static;
+				display: inline;
+				counter-increment: li;
+				content: counters(li, ".") ". ";
+			}
+			&>*:first-child {
+				display: inline;
+			}
+		}
+		h2, h3, .h2-title, .h3-title {
+			margin: 0;
+			font-size: 1em;
+			line-height: inherit;
+			&+p {
+				margin-top: 1.1em;
+			}
+		}
+	}
+}
+ol {
 	counter-reset: li; 
 	list-style: none;
 	li {
