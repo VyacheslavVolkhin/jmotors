@@ -6116,7 +6116,7 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 2.3rem;
   }
   .info-card-box .section-title {
-    font-size: 4rem;
+    font-size: 24px;
     line-height: 1.02;
     font-weight: 800;
     text-transform: uppercase;
@@ -6822,7 +6822,7 @@ html.with-fancybox body.hide-scrollbar {
     width: 50%;
   }
   .info-card-box .section-title {
-    font-size: 5rem;
+    font-size: 32px;
   }
   .content-wrap .tiles-box .item-wrap {
     width: 33.33%;
